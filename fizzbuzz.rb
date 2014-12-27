@@ -3,15 +3,18 @@ class FizzBuzz
 		@value = value
 	end
   def fizz
-  	if @value == 3
-  		"Fizz"
-  	elsif @value == 5
-  		"Buzz"
-  	elsif @value == 15
+  	if factor_of? 15
   		"FizzBuzz"
+  	elsif factor_of? 5
+  		"Buzz"
+  	elsif factor_of? 3
+  		"Fizz"
   	else
   		@value
   	end
+  end
+  def factor_of?(divisor)
+  	@value % divisor == 0
   end
 end
 
