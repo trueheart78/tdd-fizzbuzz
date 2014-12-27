@@ -7,6 +7,8 @@ class FizzBuzz
   		"Fizz"
   	elsif @value == 5
   		"Buzz"
+  	elsif @value == 15
+  		"FizzBuzz"
   	else
   		@value
   	end
@@ -26,5 +28,8 @@ class FizzBuzzTest < Test::Unit::TestCase
 	end
 	def test_five_should_get_buzz
 		assert_equal("Buzz", FizzBuzz.new(5).fizz)
+	end
+	def test_fifteen_should_get_fizzbuzz
+		assert_equal("FizzBuzz", FizzBuzz.new(15).fizz)
 	end
 end
