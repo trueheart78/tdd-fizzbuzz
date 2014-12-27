@@ -18,7 +18,7 @@ require 'test/unit'
 
 class FizzBuzzTest < Test::Unit::TestCase
 
-	def test_should_return_number
+	def test_one_should_get_number
 		assert_equal(1, FizzBuzz.new(1).fizz)
 	end
 	def test_three_should_get_fizz
