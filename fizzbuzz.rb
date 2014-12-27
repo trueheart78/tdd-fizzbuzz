@@ -5,6 +5,8 @@ class FizzBuzz
   def fizz
   	if @value == 3
   		"Fizz"
+  	elsif @value == 5
+  		"Buzz"
   	else
   		@value
   	end
@@ -22,5 +24,7 @@ class FizzBuzzTest < Test::Unit::TestCase
 	def test_three_should_get_fizz
 		assert_equal("Fizz", FizzBuzz.new(3).fizz)
 	end
-
+	def test_five_should_get_buzz
+		assert_equal("Buzz", FizzBuzz.new(5).fizz)
+	end
 end
